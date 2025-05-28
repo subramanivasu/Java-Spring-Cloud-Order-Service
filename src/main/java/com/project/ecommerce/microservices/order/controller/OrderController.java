@@ -20,7 +20,7 @@ public class OrderController {
 
         String orderNumber = orderService.placeOrder(orderRequest);
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body("Order place successfully for Order Number: " + orderNumber);
+                .body("Order placed successfully for Order Number: " + orderNumber);
 
     }
 }
