@@ -10,7 +10,8 @@ services:
     ports:
       - "3317:3306"
     volumes:
-      - ./data/mysql:/var/lib/mysql
+      - order_mysql_data:/var/lib/mysql # Changed to named volume
       - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
 
-
+volumes:
+  order_mysql_data:
